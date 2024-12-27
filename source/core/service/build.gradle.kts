@@ -26,4 +26,5 @@ dependencies {
 
     // Preferences DataStore
     implementation(libs.androidx.datastore.preferences)
+    implementation("com.github.fengzhizi715.AndroidServer:core:1.3.3")
 }

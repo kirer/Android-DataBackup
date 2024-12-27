@@ -1,5 +1,6 @@
 package com.xayah.databackup
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.core.view.WindowCompat
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.xayah.core.service.HttpService
 import com.xayah.core.ui.component.AnimatedNavHost
 import com.xayah.core.ui.route.MainRoutes
 import com.xayah.core.ui.theme.DataBackupTheme
@@ -156,5 +158,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        val intent = Intent(this, HttpService::class.java)
+        startService(intent)
     }
 }
